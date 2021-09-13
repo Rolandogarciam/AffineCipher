@@ -17,5 +17,5 @@ Generate the stdin.txt with the plaintext or ciphertext.
 
 ## Decrypt
 
-    python main.py --decipjer
+    python main.py --decipher
 
