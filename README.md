@@ -7,15 +7,15 @@ The affine cipher is a type of substitution cipher, use a shift and decimation k
   m = ((c - b) * inv(a, n)) mod n
 ```
 
-##Usage
+## Usage
 
 Generate the stdin.txt with the plaintext or ciphertext.
 
-##Encrypt
+## Encrypt
 
     python main.py -a 4 -b 8 --cipher
 
- ##Desencrypt
+## Decrypt
 
     python main.py --decipjer
 
