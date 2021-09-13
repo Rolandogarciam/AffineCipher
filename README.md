@@ -5,6 +5,7 @@ The affine cipher is a type of substitution cipher, use a shift and decimation k
 ```
   c = (a * m + b) mod n
   m = ((c - b) * inv(a, n)) mod n
+```
 
 ##Usage
 
