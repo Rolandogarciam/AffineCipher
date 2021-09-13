@@ -10,7 +10,8 @@
                                           |_|   
     Author:
         Rolando García Mogollón
-    Univers 
+    University: El Bosque
+ 
 """
 import sys
 import math
@@ -27,8 +28,9 @@ class AffineCipher:
     def encrypt(self, plaintext, a, b):
         cipher_text = []
         
-        if (self.coprime(a, len(self.alphabet))):
+        if not (self.coprime(a, len(self.alphabet))):
             print('invalid value for key a: ', a)
+            print('the value <a> must be chosen such that <a>(%s) and <m>(%s) are coprime' % (a, len(self.alphabet)))
             sys.exit(1)
 
         for m in plaintext:
@@ -39,8 +41,9 @@ class AffineCipher:
     def decrypt(self, cipher_text, a, b):
         decipher_text = []
         
-        if (self.coprime(a, len(self.alphabet))):
+        if not (self.coprime(a, len(self.alphabet))):
             print('invalid value for key a: ', a)
+            print('the value <a> must be chosen such that <a> and <m> are coprime')
             return
 
         for c in cipher_text:
@@ -72,4 +75,4 @@ class AffineCipher:
         return list(dict(values_sorted[0:3]).keys())
 
     def coprime(self, a, n):
-        return math.gcd(a, n) != 1
+        return math.gcd(a, n) == 1
