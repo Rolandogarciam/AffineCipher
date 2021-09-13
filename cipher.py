@@ -43,7 +43,7 @@ class AffineCipher:
         
         if not (self.coprime(a, len(self.alphabet))):
             print('invalid value for key a: ', a)
-            print('the value <a> must be chosen such that <a> and <m> are coprime')
+            print('the value <a> must be chosen such that <a>(%s) and <m>(%s) are coprime' % (a, len(self.alphabet)))
             return
 
         for c in cipher_text:
